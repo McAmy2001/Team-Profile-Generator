@@ -3,6 +3,10 @@ const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const generateHTML = require('./src/generateHTML');
+const fs = require('fs');
+const writeToFile = require('./utils/generate-site');
+const copyFile = require('./utils/generate-site');
+const generateSite = require('./utils/generate-site');
 const teamArray = [];
 
 const managerQuestions = () => {
@@ -208,10 +212,30 @@ const employeeQuestions = () => {
           })
         }
         else {
-          generateHTML(teamArray);
-        }
-      })
-}; 
+          console.log('Building page...');
+          let pageHTML = generateHTML(teamArray);
+          writeToFile('./dist/index.html', pageHTML);
+          copyFile();
+
+          //.then(pageHTML => {
+          //  return writeToFile('./dist/index.html', pageHTML)
+          //.then(writeFileResponse => {
+          //  console.log(writeFileResponse);
+          //  return copyFile();
+          //})
+          //.then(copyFileResponse => {
+          //  console.log(copyFileResponse);
+          //})
+          //.catch(err => {
+          //  console.log(err);
+          //})
+//
+          //})
+      }
+        
+  })
+};
+
 
 
 
@@ -223,8 +247,25 @@ managerQuestions()
   teamArray.push(manager);
   //console.log(teamArray);
   //console.log(manager.office);
-  employeeQuestions();
+  employeeQuestions()
 });
+//  .then(teamArray => {
+//    return generateHTML(teamArray);
+//  })
+//  .then(pageHTML => {
+//    return writeToFile('./dist/index.html', pageHTML);
+//  })
+//  .then(writeFileResponse => {
+//    console.log(writeFileResponse);
+//    return copyFile();
+//  })
+//  .then(copyFileResponse => {
+//    console.log(copyFileResponse);
+//  })
+//  .catch(err => {
+//    console.log(err);
+//  })
+//});
 
 //.then(employeeQuestions())
 //.then(answers => {
