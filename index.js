@@ -15,12 +15,12 @@ const managerQuestions = () => {
       {
         type: 'input',
         name: 'name',
-        message: 'What is your name?',
+        message: "What is the manager's name?",
         validate: nameInput => {
           if (nameInput) {
             return true;
           } else {
-            console.log('Please enter your name.');
+            console.log('Please enter a name.');
             return false;
           }
         }
@@ -28,12 +28,12 @@ const managerQuestions = () => {
       {
         type: 'input',
         name: 'id',
-        message: 'What is your employee ID number?',
+        message: "What is the manager's employee ID number?",
         validate: idInput => {
           if (idInput) {
             return true;
           } else {
-            console.log('Please enter your ID number.');
+            console.log('Please enter an ID number.');
             return false;
           }
         }
@@ -41,12 +41,12 @@ const managerQuestions = () => {
       {
         type: 'input',
         name: 'email',
-        message: 'What is your email address?',
+        message: "What is the manager's email address?",
         validate: emailInput => {
           if (emailInput) {
             return true;
           } else {
-            console.log('Please enter your email address.')
+            console.log('Please enter an email address.')
             return false;
           }
         }
@@ -54,12 +54,12 @@ const managerQuestions = () => {
       {
         type: 'input',
         name: 'office',
-        message: 'What is your office number?',
+        message: "What is the manager's office number?",
         validate: officeInput => {
           if (officeInput) {
             return true;
           } else {
-            console.log('Please enter your office number.');
+            console.log('Please enter the office number.');
             return false;
           }
         }
