@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #887880;
+  font-family: 'Abril Fatface', cursive;
+}
+
+header {
+  color: #f6e8ea;
+  background-color: #5a0001;
+  text-align: center;
+  padding: 40px;
+  font-size: 30px;
+  
+}
+
+.card {
+  background-color: #ff7f11;
+  color: #22181c;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.card-subtitle {
+  margin-bottom: 5px;
+}
+
+.list-group-item {
+  background-color: #f6e8ea;
+  margin-bottom: 5px;
+  
+}
+
+a {
+  color: #22181c;
+}

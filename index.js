@@ -4,8 +4,7 @@ const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const generateHTML = require('./src/generateHTML');
 const fs = require('fs');
-const writeToFile = require('./utils/generate-site');
-const copyFile = require('./utils/generate-site');
+const { writeToFile, copyFile } = require('./utils/generate-site');
 const generateSite = require('./utils/generate-site');
 const teamArray = [];
 
@@ -199,7 +198,6 @@ const employeeQuestions = () => {
           addEngineer().then(answers => {
             const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github);
             teamArray.push(engineer);
-            //console.log(teamArray);
             employeeQuestions();
           })
         }
@@ -207,33 +205,16 @@ const employeeQuestions = () => {
           addIntern().then(answers => {
             const intern = new Intern(answers.name, answers.id, answers.email, answers.school);
             teamArray.push(intern);
-            //console.log(teamArray);
             employeeQuestions();
           })
         }
         else {
           console.log('Building page...');
-          let pageHTML = generateHTML(teamArray);
+          let pageHTML = generateHTML(teamArray)
           writeToFile('./dist/index.html', pageHTML);
           copyFile();
-
-          //.then(pageHTML => {
-          //  return writeToFile('./dist/index.html', pageHTML)
-          //.then(writeFileResponse => {
-          //  console.log(writeFileResponse);
-          //  return copyFile();
-          //})
-          //.then(copyFileResponse => {
-          //  console.log(copyFileResponse);
-          //})
-          //.catch(err => {
-          //  console.log(err);
-          //})
-//
-          //})
-      }
-        
-  })
+        }
+      })
 };
 
 
@@ -241,34 +222,9 @@ const employeeQuestions = () => {
 
 managerQuestions()
 .then(answers => {
-  //let managerInfo = answers;
   const manager = new Manager(answers.name, answers.id, answers.email, answers.office);
-  //console.log(manager.getRole());
   teamArray.push(manager);
-  //console.log(teamArray);
-  //console.log(manager.office);
   employeeQuestions()
 });
-//  .then(teamArray => {
-//    return generateHTML(teamArray);
-//  })
-//  .then(pageHTML => {
-//    return writeToFile('./dist/index.html', pageHTML);
-//  })
-//  .then(writeFileResponse => {
-//    console.log(writeFileResponse);
-//    return copyFile();
-//  })
-//  .then(copyFileResponse => {
-//    console.log(copyFileResponse);
-//  })
-//  .catch(err => {
-//    console.log(err);
-//  })
-//});
 
-//.then(employeeQuestions())
-//.then(answers => {
-//  console.log(answers);
-//})
   
