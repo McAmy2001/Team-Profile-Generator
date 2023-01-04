@@ -1,4 +1,4 @@
-# Bootcamp Module 10: Obeject Oriented Programming, Challenge: Team Profile Generator
+# Bootcamp Module 10: Object Oriented Programming, Challenge: Team Profile Generator
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ## The Team Profile Generator creates an HTML file with employee information entered by the user. All code is my own.
 Watch a demonstration [here](https://drive.google.com/file/d/15azTnuvrG5-n4NCZOghTncArcsGqRmZX/view?usp=sharing).
