@@ -1,10 +1,11 @@
-# Bootcamp Module 10: Object Oriented Programming, Challenge: Team Profile Generator
+# Team Profile Generator
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ## The Team Profile Generator creates an HTML file with employee information entered by the user. All code is my own.
 Watch a demonstration [here](https://drive.google.com/file/d/15azTnuvrG5-n4NCZOghTncArcsGqRmZX/view?usp=sharing).
 ## Table of Contents:
 - [Installation](#installation)
 - [Usage](#usage)
+- [Technologies](#technologies)
 - [License](#license)
 - [Contributing](#contributing)
 - [Testing](#tests)
@@ -17,6 +18,13 @@ On the command line type `node index`. This will prompt a series of questions. A
 ![Screenshot1](./src/images/Screen%20Shot%202022-07-03%20at%204.25.55%20PM%20Medium.jpeg)
 ![Screenshot2](./src/images/Screen%20Shot%202022-07-03%20at%204.26.44%20PM%20Medium.jpeg)
 ![Screenshot3](./src/images/Screen%20Shot%202022-07-03%20at%204.25.10%20PM%20Medium.jpeg)
+
+## Technologies
+- Javascript
+- HTML
+- CSS
+- [Inquirer](https://www.npmjs.com/package/inquirer)
+- [Jest](https://jestjs.io/)
 ## License 
 &copy; 2022 by Amy McCabe. 
 This project is licensed under the MIT license.
